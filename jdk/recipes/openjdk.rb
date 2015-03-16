@@ -1,13 +1,14 @@
 #
 # Cookbook Name:: jdk
-# Recipe:: default
+# Recipe:: openjdk
 #
 # Copyright 2015, think-t(http://think-t.hatenablog.com)
 #
 # All rights reserved - Do Not Redistribute
 #
-if node['jdk']['enable_oraclejdk'] then
-  include_recipe "jdk::oraclejdk"
-else
-  include_recipe "jdk::openjdk"
+%w{ openjdk, openjdk-devel }.each do |pkg|
+  yum_package pkg do
+    action :install
+  end
+  not_if "rpm -q #{pkg}"
 end
