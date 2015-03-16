@@ -6,8 +6,11 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-if node['jdk']['enable_oraclejdk'] then
+p "use_oracle_jdk: " + node['jdk']['use_oracle_jdk']
+if node['jdk']['use_oracle_jdk'] == true then
+p "true"
   include_recipe "jdk::oraclejdk"
 else
+p "false"
   include_recipe "jdk::openjdk"
 end
