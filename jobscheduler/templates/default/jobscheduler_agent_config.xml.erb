@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="eng">
+<com.izforge.izpack.panels.UserInputPanel id="home">
+<userInput/>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="licences">
+<userInput>
+<entry key="licenceOptions" value="GPL"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.HTMLLicencePanel id="gpl_licence"/>
+<com.izforge.izpack.panels.HTMLLicencePanel id="commercial_licence"/>
+<com.izforge.izpack.panels.TargetPanel id="target">
+<installpath>/opt/sos-berlin.com/jobscheduler</installpath>
+</com.izforge.izpack.panels.TargetPanel>
+<com.izforge.izpack.panels.UserPathPanel id="userpath">
+<UserPathPanelElement>/home/scheduler/sos-berlin.com/jobscheduler</UserPathPanelElement>
+</com.izforge.izpack.panels.UserPathPanel>
+<com.izforge.izpack.panels.UserInputPanel id="network">
+<userInput>
+<entry key="schedulerPort" value="4444"/>
+<entry key="launchScheduler" value="yes"/>
+<entry key="schedulerAllowedHost" value="0.0.0.0"/>
+<entry key="schedulerHost" value="localhost"/>
+<entry key="schedulerId" value="scheduler_agent"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.InstallPanel id="install"/>
+<com.izforge.izpack.panels.ProcessPanel id="process"/>
+<com.izforge.izpack.panels.FinishPanel id="finish"/>
+</AutomatedInstallation>
