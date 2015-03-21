@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-centos5_valid = [ '1.6.0', '1.7.0' ]
+centos5_valid = [ '1.4.2', '1.6.0', '1.7.0' ]
 centos6_valid = [ '1.6.0', '1.7.0', '1.8.0' ]
 
 case node['platform']
