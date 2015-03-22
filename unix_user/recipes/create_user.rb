@@ -13,15 +13,15 @@ d_id.each do |id|
 
   if u['id'] != 'root' then
     group u['id'] do
-      gid u['gid']
+      gid u['gid'].to_i
       action :create
     end
 
     user u['id'] do
       home     u['home']
       shell    u['shell']
-      uid      u['uid']
-      gid      u['gid']
+      uid      u['uid'].to_i
+      gid      u['gid'].to_i
       password u['password']
       supports :manage_home => true, :non_unique => false
       action :create
@@ -29,7 +29,7 @@ d_id.each do |id|
 
     directory "/home/#{id}/.ssh" do
       owner u['id']
-      group u['id']
+      group u['id'].to_i
       mode 0700
       action :create
     end
